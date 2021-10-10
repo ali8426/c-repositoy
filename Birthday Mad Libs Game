@@ -1,0 +1,25 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    string adjective, number, secAdjective, place, verb;
+    cout<< "Enter a adjective: ";
+    getline(cin, adjective);
+    cout<< "Enter a number (word form): ";
+    getline(cin, number);
+    cout<< "Enter a adjective: ";
+    getline(cin, secAdjective);
+    cout<< "Enter a place: ";
+    getline(cin, place);
+    cout<< "Enter a verb: ";
+    getline(cin, verb);
+    cout<<endl;
+    cout<< "It's my " << adjective << " birthday, and im turning " << number << " years old! "<<endl;
+    cout<< "For my party, my "<< secAdjective << " friends and I are going to the " << place << " to " << verb << " the day away. "<<endl;
+    cout<< "I can't wait!"<<endl;
+    
+    
+    return 0;
+}
