@@ -1,0 +1,46 @@
+#include <iostream>
+#include <ctime>
+
+
+using namespace std;
+
+int main()
+{
+    int y;
+    string valueComp, valueUser;
+    srand(time(NULL));
+    int randomNumber = rand() % 3 + 1;
+    if(randomNumber == 1){
+        valueComp = "rock";
+    }else if(randomNumber == 2){
+        valueComp = "paper";
+    } else if(randomNumber == 3){
+        valueComp = "scissors";
+    }
+    tryAgain:
+    cout<< "What would you like to choose? Enter '1' for rock, enter '2' for paper, or '3' for scissor" <<endl;
+    cin>>y;
+    if(y == 1){
+        valueUser = "rock";
+    }else if(y == 2){
+        valueUser = "paper";
+    } else if(y == 3){
+        valueUser = "scissors";
+    }
+    if(y == 1 || y == 2 || y == 3){
+    if(y == randomNumber){
+        cout<< "It's a tie! You both choose "<< valueComp<<endl;
+    }else if(randomNumber == 1 && y == 3){
+        cout<< "The computer won. Better luck next time. You choose "<< valueUser << " and the computer choose "<< valueComp <<endl;
+    }else if(randomNumber == 2 && y == 1){
+        cout<< "The computer won. Better luck next time. You choose "<< valueUser << " and the computer choose "<< valueComp <<endl;
+    }else if(randomNumber == 3 && y == 2){
+        cout<< "The computer won. Better luck next time. You choose "<< valueUser << " and the computer choose "<< valueComp <<endl;
+    }else{
+        cout<< "Congrats! You Won! You choose "<< valueUser << " and the computer choose "<< valueComp <<endl;
+    }
+    }else{
+        goto tryAgain;
+    }
+    return 0;
+}
