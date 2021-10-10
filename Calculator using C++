@@ -1,0 +1,37 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    double x,y;
+    char op, ag;
+    tryAgain:
+    cout<< "Please enter 2 numbers that you would like to calculate" <<endl;
+    cin>> x >> y;
+    invalidOp:
+    cout<< "Enter 'a' to add, 's' to subtract, 'm' to multiply, or 'd' to divide" <<endl;
+    cin>> op;
+    if(op == 'a'){
+      cout<< x <<" + " << y << " = " << x+y <<endl;  
+    }else if(op == 's'){
+        cout<< x <<" - " << y << " = " << x-y <<endl;
+    }else if(op == 'm'){
+        cout<< x <<" * " << y << " = " << x*y <<endl;
+    }else if(op == 'd'){
+        cout<< x <<" / " << y << " = " << x/y <<endl;
+    }else{
+        goto invalidOp;
+    }
+    mithi:
+    cout<< "Would you like to calculate again? Enter 'y' for yes and 'n' for no" <<endl;
+    cin>>ag;
+    if(ag == 'y'){
+        goto tryAgain;
+    }else if(ag == 'n'){
+        cout<< "Thanks for using my calculator";
+    } else {
+        goto mithi;
+    }
+    return 0;
+}
