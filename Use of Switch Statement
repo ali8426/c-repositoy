@@ -1,0 +1,52 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+string numText(int a){
+    string  mithi;
+    switch(a){
+        case 0:
+            mithi="zero";
+            break;
+        case 1:
+            mithi="one";
+            break;
+        case 2:
+            mithi="two";
+            break;
+        case 3:
+            mithi="three";
+            break;
+        case 4:
+            mithi="four";
+            break;
+        case 5:
+            mithi="five";
+            break;
+        case 6:
+            mithi="six";
+            break;
+        case 7:
+            mithi="seven";
+            break;
+        case 8:
+            mithi="eight";
+            break;
+        case 9:
+            mithi="nine";
+            break;
+        default:
+            mithi="invalid";
+    }
+    return mithi;
+}
+
+int main()
+{
+    int a;
+    cin>>a;
+    cout<<numText(a);
+
+    return 0;
+}
