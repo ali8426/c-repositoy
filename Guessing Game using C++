@@ -6,13 +6,21 @@ int main()
 {
     int x= 127;
     int y;
-    std::cout << "Guess what the number is (between 0-300 inclusive):" << std::endl;
+    int z=9;
+    std::cout << "Guess what the number is (between 0-300 inclusive): You have 10 guesses: ";
     cin>>y;
     while(y != x){
-        std::cout << "Try Again:" << std::endl;
+        z--;
+        std::cout << "Try Again: You have " << z +1 <<" guesses left: ";
         cin>>y;
+        if(z==0){
+            cout<<"No more tries. Try Again please";
+            break;
+        }else if(x==y){
+            std::cout << "Nice job you guessed my number!" << std::endl;
+        }
     }
     
- std::cout << "Nice job you guessed my number!" << std::endl;
+ 
     return 0;
 }
