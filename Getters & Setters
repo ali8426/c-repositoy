@@ -1,0 +1,51 @@
+/******************************************************************************
+
+                              Online C++ Compiler.
+               Code, Compile, Run and Debug C++ program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <iostream>
+
+using namespace std;
+
+class Car{
+    private:
+        int seats;
+    public:
+        string brand, model;
+        Car(string aBrand, string aModel, int aSeats){
+            brand= aBrand;
+            model= aModel;
+            countSeat(aSeats);
+        }
+    void countSeat(int aSeats){
+        if(aSeats == 2 || aSeats == 4 || aSeats == 5 || aSeats == 7 || aSeats == 8){
+            seats= aSeats;
+        }else{
+            seats= 0;
+        }
+    }
+    
+    int getSeats(){
+        return seats;
+    }
+        
+};
+
+
+int main()
+{
+
+
+    Car car1("Mercedes", "GLS", 7);
+    Car car2("BMW", "X", 5);
+    Car car3("Mclaren", "Speedtail", 3);
+
+    cout<<car1.getSeats()<<endl;
+    cout<<car2.getSeats()<<endl;
+    cout<<car3.getSeats()<<endl;
+    
+    return 0;
+}
