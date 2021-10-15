@@ -1,0 +1,32 @@
+#include <iostream>
+
+using namespace std;
+
+class Car{
+    public:
+        string brand, model;
+        int seats;
+        Car(string aBrand, string aModel, int aSeats){
+            brand= aBrand;
+            model= aModel;
+            seats= aSeats;
+        }
+    
+        
+};
+
+
+int main()
+{
+
+
+    Car car1("Mercedes", "GLS", 7);
+    Car car2("BMW", "X", 5);
+    Car car3("Mclaren", "Speedtail", 3);
+
+    cout<<car1.brand<<endl;
+    cout<<car2.model<<endl;
+    cout<<car3.seats<<endl;
+    
+    return 0;
+}
